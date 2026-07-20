@@ -7,6 +7,8 @@
 }
 
 body{
+     overflow-x:hidden;
+    width:100%;
     background:#f8fafc;
     color:#1e293b;
     line-height:1.6;
@@ -127,8 +129,10 @@ section{
 
 
 .image img{
-    width:350px;
-    height:350px;
+    
+   width:clamp(150px, 40vw, 350px);
+    height:clamp(150px, 40vw, 350px);
+
     border-radius:50%;
     border:5px solid #2563eb;
     object-fit:cover;
@@ -196,8 +200,8 @@ section{
 }
 
 .about-img img{
-    width:350px;
-    height:350px;
+   width:clamp(150px, 40vw, 350px);
+    height:clamp(150px, 40vw, 350px);
     border-radius:50%;
     border:5px solid #2563eb;
     object-fit:cover;
@@ -338,10 +342,22 @@ button{
 
 
 @media(max-width:768px){
+    .project-container{
+        grid-template-columns:1fr;
+    }
+     section{
+        padding:60px 6%;
+    }
+
 
     nav{
         flex-direction:column;
         padding:15px;
+         gap:10px;
+    }
+
+     nav h2{
+        font-size:20px;
     }
 
     nav ul{
@@ -363,8 +379,8 @@ button{
 
     .image img,
     .about-img img{
-        width:250px;
-        height:250px;
+        width:clamp(150px, 40vw, 350px);
+    height:clamp(150px, 40vw, 350px);
     }
 
     .skills-section{
@@ -379,6 +395,7 @@ button{
         text-align:left;
     }
 } 
+
   .theme-switch{
 
     display:flex;
