@@ -254,6 +254,7 @@ section{
 
 .skill-box ul li{
     margin-bottom:10px;
+    color:#1e293b;
 }
 
 /* PROJECTS */
@@ -322,7 +323,7 @@ section{
 
 .contact input:focus,
 .contact textarea:focus{
-    outline:none;
+    outline:2px solid #2563eb;
     border-color:#2563eb;
 
     box-shadow:
@@ -377,4 +378,138 @@ button{
     .about-content p{
         text-align:left;
     }
+} 
+  .theme-switch{
+
+    display:flex;
+    align-items:center;
+    
+
+}
+
+.theme-switch input{
+
+    display:none;
+
+}
+
+.slider{
+
+    position:relative;
+
+    width:50px;
+
+    height:20px;
+
+    background:#d1d5db;
+
+    border-radius:30px;
+
+    cursor:pointer;
+
+    transition:.4s;
+
+}
+
+.slider::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:16px;
+
+    height:16px;
+
+    left:3px;
+
+    top:3px;
+
+    background:white;
+
+    border-radius:50%;
+
+    transition:.4s;
+
+}
+
+input:checked + .slider{
+
+    background:#2563eb;
+
+}
+
+input:checked + .slider::before{
+
+    transform:translateX(30px);
+
+}
+
+body{
+
+    background:#ffffff;
+    color:#222;
+    transition:.4s;
+
+}
+
+body.dark{
+
+    background:#0f172a;
+    color:white;
+
+}
+
+body.dark .navbar{
+
+    background:#1e293b;
+
+}
+
+body.dark .card{
+
+    background:#334155;
+    color:white;
+
+}
+
+body.dark input,
+body.dark textarea{
+
+    background:#1e293b;
+    color:white;
+    border:1px solid #475569;
+
+}
+
+body.dark footer{
+
+    background:#1e293b;
+
+}
+ #voice-btn{
+
+    padding:12px 25px;
+
+    border:none;
+
+    border-radius:25px;
+
+    background:#2563eb;
+
+    color:white;
+
+    font-size:16px;
+
+    cursor:pointer;
+
+    transition:0.3s;
+
+}
+
+
+#voice-btn:hover{
+
+    transform:scale(1.05);
+
 }
