@@ -382,6 +382,14 @@ button{
     .content h1{
         font-size:42px;
     }
+    .content .btn,
+    .content #voice-btn{
+        display:block;
+        width:100%;
+        max-width:280px;
+        margin:10px auto 0;
+        text-align:center;
+    }
 
     .image img,
     .about-img img{
